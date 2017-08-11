@@ -1,6 +1,6 @@
-pkgbuild
+PKGBUILD
 *.swp
-
+*.o
 
 *.in
 *.m4
@@ -13,3 +13,11 @@ config.*
 ltmain.sh
 compile
 missing
+*.tar.gz
+*.tar.xz
+Makefile
+stamp-h1
+src/.deps/
+src/powermenu
+libtool
+autom4te.cache
