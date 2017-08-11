@@ -1,0 +1,15 @@
+pkgbuild
+*.swp
+
+
+*.in
+*.m4
+*.m4a
+~*
+install-sh
+depcomp
+configure
+config.*
+ltmain.sh
+compile
+missing
