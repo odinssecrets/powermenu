@@ -1,6 +1,10 @@
 #include <gtk/gtk.h> 
 #include <stdlib.h>
 
+#ifndef DATA_PATH
+#define DATA_PATH "./"
+#endif
+
 static void shutdown(){
   system("systemctl poweroff");
 }
@@ -41,10 +45,10 @@ static void activate (GtkApplication *app, gpointer user_data)
   gtk_window_set_decorated(GTK_WINDOW(window), FALSE);
   gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
-  GtkWidget *power_buf = gdk_pixbuf_new_from_file_at_size( "images/pwr.png", unit/2, unit/2, NULL); 
-  GtkWidget *restart_buf = gdk_pixbuf_new_from_file_at_size( "images/restart.png", unit/2, unit/2, NULL);
-  GtkWidget *suspend_buf = gdk_pixbuf_new_from_file_at_size( "images/suspend.png", unit/2, unit/2, NULL);
-  GtkWidget *cancel_buf = gdk_pixbuf_new_from_file_at_size( "images/cancel.png", unit/2, unit/2, NULL);
+  GtkWidget *power_buf = gdk_pixbuf_new_from_file_at_size( DATA_PATH"images/pwr.png", unit/2, unit/2, NULL); 
+  GtkWidget *restart_buf = gdk_pixbuf_new_from_file_at_size( DATA_PATH"images/restart.png", unit/2, unit/2, NULL);
+  GtkWidget *suspend_buf = gdk_pixbuf_new_from_file_at_size( DATA_PATH"images/suspend.png", unit/2, unit/2, NULL);
+  GtkWidget *cancel_buf = gdk_pixbuf_new_from_file_at_size( DATA_PATH"images/cancel.png", unit/2, unit/2, NULL);
   
   GtkWidget *powerImg   = gtk_image_new_from_pixbuf(power_buf);
   GtkWidget *restartImg = gtk_image_new_from_pixbuf(restart_buf);

@@ -6,10 +6,4 @@ AUTOMAKE_OPTIONS=foreign
 
 EXTRA_DIST = HACKING
 CLEANFILES = *~
-SUBDIRS = src
-
-imagesdir=images
-nobase_dist_images_DATA		=images/pwr.png \
-													 images/restart.png \
-													 images/suspend.png \
-													 images/cancel.png
+SUBDIRS = src images
